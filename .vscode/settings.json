@@ -1,0 +1,5 @@
+{
+  "java.project.sourcePaths": ["Chess program/src"],
+  "java.project.outputPath": "out",
+  "java.configuration.updateBuildConfiguration": "automatic"
+}
