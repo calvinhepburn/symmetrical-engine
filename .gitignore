@@ -1,0 +1,23 @@
+# Compiled Java class files
+*.class
+
+# Build output
+out/
+build/
+target/
+
+# IntelliJ IDEA project files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Packages / logs
+*.jar
+*.war
+*.log
+
+# OS / misc junk
+*.lnk
+.DS_Store
+Thumbs.db
