@@ -70,6 +70,7 @@ public class Board {
     }
     public Board clone(Game g){
         Board clone = new Board(g);
+        g.turnColour = this.g.turnColour;
         for(int i = 0; i < 8; i++){
             for(int j = 0; j<8;j++){
                 if(this.board[i][j].piece instanceof Pawn)
