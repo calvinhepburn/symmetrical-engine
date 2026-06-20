@@ -84,6 +84,8 @@ public class Board {
                     clone.board[i][j].piece = new Queen(clone,clone.board[i][j], this.board[i][j].piece.colour);
                 else if(this.board[i][j].piece instanceof King)
                     clone.board[i][j].piece = new King(clone,clone.board[i][j], this.board[i][j].piece.colour);
+                if(clone.board[i][j].piece != null)
+                    clone.board[i][j].piece.hasMoved = this.board[i][j].piece.hasMoved;
             }
         }
         return clone;
@@ -141,6 +143,6 @@ public class Board {
                 }
             }
         }
-        return new SimpleBoard(saveBoard);
+        return new SimpleBoard(saveBoard, this.g.turnColour);
     }
     }

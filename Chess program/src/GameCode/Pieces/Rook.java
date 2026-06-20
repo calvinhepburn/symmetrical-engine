@@ -6,7 +6,6 @@ import GameCode.Move;
 import java.util.ArrayList;
 
 public class Rook extends Piece {
-    public boolean hasMoved;
     public Rook(Board b, Board.square sqr, boolean c) {
         super(b, sqr, c);
         if(c){

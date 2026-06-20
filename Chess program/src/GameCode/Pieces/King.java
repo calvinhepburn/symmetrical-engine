@@ -5,7 +5,6 @@ import GameCode.Move;
 
 import java.util.ArrayList;
 public class King extends Piece {
-    boolean check = false;
     public King(Board b, Board.square sqr, boolean c){
         super(b, sqr, c);
         if(c){
@@ -41,9 +40,16 @@ public class King extends Piece {
         }
         return moves;
     }
+    public boolean isInCheck(){
+        for (Move m : g.findAllMovesIgnoreCheck(!colour)) {
+            if (m.endSqr == position && m.capture)
+                return true;
+        }
+        return false;
+    }
     public ArrayList<Move> findMovesWithCheck(){
         ArrayList<Move> moves = super.findMovesWithCheck();
-        if (!this.hasMoved && !this.check) {
+        if (!this.hasMoved && !isInCheck()) {
             int row = this.position.getRow() - 1;
             int column = this.position.getColumn() - 1;
             try {

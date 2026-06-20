@@ -51,13 +51,13 @@ public void executeMoveTheory(Move m, Board b){
             Piece rook1 = b.board[7][m.endSqr.getRow()-1].piece;
             b.board[7][m.endSqr.getRow()-1].piece = null;
             b.board[5][m.endSqr.getRow()-1].piece =rook1;
-            rook1.position = b.board[4][m.endSqr.getRow()-1];
+            rook1.position = b.board[5][m.endSqr.getRow()-1];
         }
         else{
             Piece rook1 = b.board[0][m.endSqr.getRow()-1].piece;
             b.board[0][m.endSqr.getRow()-1].piece = null;
             b.board[3][m.endSqr.getRow()-1].piece =rook1;
-            rook1.position = b.board[2][m.endSqr.getRow()-1];
+            rook1.position = b.board[3][m.endSqr.getRow()-1];
         }
     }
     else {
@@ -125,13 +125,15 @@ public void executeMove(Move m, Board b){
             Piece rook1 = b.board[7][m.endSqr.getRow()-1].piece;
             b.board[7][m.endSqr.getRow()-1].piece = null;
             b.board[5][m.endSqr.getRow()-1].piece =rook1;
-            rook1.position = b.board[4][m.endSqr.getRow()-1];
+            rook1.position = b.board[5][m.endSqr.getRow()-1];
+            rook1.hasMoved = true;
         }
         else{
             Piece rook1 = b.board[0][m.endSqr.getRow()-1].piece;
             b.board[0][m.endSqr.getRow()-1].piece = null;
             b.board[3][m.endSqr.getRow()-1].piece =rook1;
-            rook1.position = b.board[2][m.endSqr.getRow()-1];
+            rook1.position = b.board[3][m.endSqr.getRow()-1];
+            rook1.hasMoved = true;
         }
     }
     else {
